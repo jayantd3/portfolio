@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayant- Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: poppins, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: rgb(17, 17, 69);
+            height: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.4rem;
+            color: lavender;
+        }
+
+        .navbar a {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-left: 3rem;
+            transition: 1s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+
+        }
+
+        main hr {
+            border: 0;
+            background: lavender;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        /* secondsection div {
+            width:30%;
+        } */
+        .leftsection {
+            margin: 70px 0;
+            font-size: 3rem;
+        }
+
+        .leftsection buttons {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 9px;
+            border-style: solid;
+            color: white;
+            /* border-block-color: white; */
+            border-color: white;
+            background-color: #f0daf0;
+            border: 2px solid white;
+            border-radius: 100px;
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+        }
+
+        .rightsection {
+
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(145, 69, 216);
+        }
+
+        .text-gray {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(111, 111, 193);
+
+        }
+
+        .secondsection {
+            /* width: 100%; */
+            max-width: 80vw;
+            /* margin-left: 150px;
+            margin-right: auto; */
+            margin: auto;
+            height: 80vh;
+            /* Center within left side */
+        }
+
+        .secondsection h1 {
+            font-size: 2rem;
+
+        }
+
+        .secondsection .box {
+            margin: 56px auto;
+            height: 100px;
+            width: 77vw;
+            position: relative;
+            border-top: 2px solid white;
+        }
+
+        .secondsection .vertical {
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 80px;
+            background: white;
+        }
+
+        .image-top1 {
+            width: 130px;
+            position: relative;
+            top: -62px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .image-top2 {
+            width: 100px;
+            position: relative;
+            top: -62px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .image-top3 {
+            width: 100px;
+            position: relative;
+            top: -68px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .image-top4 {
+            width: 95px;
+            position: relative;
+            top: -68px;
+            left: 50%;
+            height: 65px;
+            transform: translateX(-50%);
+        }
+
+
+        .vertical-title1 {
+            margin-top: 20px;
+            top: 85px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-title2 {
+            margin-top: 19px;
+            top: 85px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-title3 {
+            margin-top: 13px;
+            top: 85px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-title4 {
+            margin-top: 11px;
+            top: 85px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-desc {
+
+
+            top: 140px;
+            color: grey;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .footer {
+            background-color: purple;
+            /* height: 230px; */
+            margin-top: 50px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        .footer-second {
+            text-decoration: none;
+        }
+
+        footer .footer-right {
+            text-align: center;
+            background-color: purple;
+            padding: 12px 0;
+            color: grey;
+        }
+
+        .profile-pic {
+                width: 500px;
+    height: 600px;
+    border-radius: 40%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 4px solid #c87373;
+    background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jayant's Portfolio</div>
+            <div class="right">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about2.html">About</a></li>
+                        <li><a href="about2.html">Projects</a></li>
+                        <!-- <li><a href="Skills">Experience</a></li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Jayant Gusain </span>
+                <div>and I am a passionate</div>
+
+                <span id="element"></span>
+                <div class="buttons">
+
+                    <a href="latestCV.pdf" download class="btn"> Download Resume</a>
+
+                    <!-- <a href="https://github.com/jayantd3" class="btn">Visit Github</a> -->
+                </div>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/jayantgusain/" target="_blank"><i class="bx bxl-linkedin-square bx-tada"></i></a>
+                    <a href="https://www.instagram.com/jayant.gusain" target="_blank"><i class="bx bxl-instagram bx-flip-horizontal bx-tada"></i></a>
+                    <a href="https://github.com/jayantd3" target="_blank"><i class="bx bxl-github bx-flip-horizontal bx-tada"></i></a>
+                </div>
+            </div>
+
+
+            <div class="rightsection">
+                <img src="Images/Passportpic.jpg" class="profile-pic">
+
+            </div>
+
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical" style="left:20%;">
+                    <img class="image-top1" src="Images/ai.png">
+                    <div class="vertical-title1">
+                        A.I. Intern, Smartknower by Microsoft <br>
+                        Dec 2020 – Feb 2021
+                    </div>
+                    <div class="vertical-desc">
+                        Trained a Deep Learning Convolutional Neural Network to detect whether a person is wearing a
+                        mask or not in real-time. Trained a Neural Network to predict heart disease in a person using
+                        data like age, gender, cholesterol, Blood pressure, etc.
+                    </div>
+                </div>
+                <div class="vertical" style="left:40%;">
+                    <img class="image-top2" src="Images/net.png">
+                    <div class="vertical-title2">
+                        Trexova Wellbeing Pvt. Ltd. | Full Stack Developer<br> March 2022 – March 2023
+                    </div>
+                    <div class="vertical-desc">
+                        Engineered 4 ASP.NET Core microservices handling 20K+ daily healthcare transactions with 99.8%
+                        uptime. Built 5 REST APIs, optimized 30+ SQL queries and 12 procedures (40% faster
+                        data-fetching). Secured 120+ endpoints via RBAC, AES encryption, and validation. Collaborated
+                        with a 6-member hybrid team, integrating Java services with 4 legacy systems. Resolved 20+
+                        bottlenecks, improving API speed by 50% and DB throughput by 30%.
+                    </div>
+                </div>
+                <div class="vertical" style="left: 60%;">
+                    <img class="image-top3" src="Images/analyst.png">
+                    <div class="vertical-title3">
+                        Kailash Healthcare Ltd | Data Analyst<br> April 2024 – Feb 2025
+                    </div>
+                    <div class="vertical-desc">
+                        Conducted fraud analytics and risk mitigation for Fortune 500 audit clients (Banking, Insurance,
+                        FSI), boosting scope by 100% and cutting manual effort by 50% using EDA, SAS, and SQL. Detected
+                        $1.5M in discrepancies from large financial datasets, accelerating audit completion by 20%.
+                        Delivered Power BI dashboards to enhance decision-making, applied predictive analytics to
+                        patient data, and led project delivery, budgeting, and mentoring efforts for timely execution.
+
+                    </div>
+                </div>
+
+                <div class="vertical" style="left:80%;">
+                    <img class="image-top4" src="Images/dev.jpg">
+                    <div class="vertical-title4">
+                        Internship, Infosys | System Engineer Trainee <br>March 2025 - June 2025
+                    </div>
+                    <div class="vertical-desc">
+                        Contributed to full-stack development by styling UIs with HTML/CSS, integrating 6 REST APIs in
+                        C#, and creating 4 reusable Angular components. Optimized ~20 SQL queries (15% faster fetch) and
+                        deployed 2 microservices to Azure. Achieved ~60% unit test coverage across .NET/Java, reducing
+                        defects by 15%, and delivered all sprint goals on time in a 5-member Agile team.
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer" style="margin-top: 100px;">
+            <div class="footer-first">
+                <h3>Jayant's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <a href="index.html" style="text-decoration: none; color: rgb(187, 179, 179);">
+                        <li>Home</li>
+                    </a>
+                    <a href="about2.html" style="text-decoration: none; color: rgb(187, 179, 179);">
+                        <li>About</li>
+                    </a>
+                    <a href="about2.html" style="text-decoration: none; color: rgb(187, 179, 179);">
+                        <li>Projects</li>
+                    </a>
+                    <a href="contact.html" style="text-decoration: none; color: rgb(187, 179, 179);">
+                        <li>Contact Me</li>
+                    </a>
+
+
+                </ul>
+            </div>
+            <div class="footer-third"></div>
+            <div class="footer-fourth"></div>
+        </div>
+        <div class="footer-right">
+            Copyright &#169; Jayantsportfolio.com | ALL RIGHTS RESERVED
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Full Stack Developer, .NET Developer  </i>', '&amp;<i> a Rapper</i>'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+
+</html>

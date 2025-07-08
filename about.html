@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YxNG | Backend Developer</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <button id="darkToggle">🌙</button>
+
+  <header class="hero" data-aos="fade-down">
+    <h1>Hey!, I'm Jayant Gusain </h1>
+    <p>And I coded my portfolio from sratch</p>
+    <p>Backend Developer • ASP.NET Core • SQL Optimization • Azure Microservices</p>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Results-driven backend developer proficient in Java, C#, .NET Core and EF Core. Specializing in scalable, secure APIs with ASP.NET Core Web API. Experienced with MySQL, HSQL, SQL Server optimization, and cloud deployments via Azure. I designed and coded this portfolio website from scratch to showcase my work and technical expertise.
+    </p>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages & Frameworks:</strong> Java, C#, .NET Core, EF Core, Node.js, C++, Python, ASP.NET Core Web API</li>
+      <li><strong>Frontend Tools:</strong> HTML5, Angular, Bootstrap</li>
+      <li><strong>Databases & Tools:</strong> MySQL, HSQL, SQL Server, Power BI, Excel, PowerPoint</li>
+      <li><strong>Concepts & Soft Skills:</strong> Cloud Computing (Azure), Backend Security, Prompt Engineering, Team Collaboration</li>
+    </ul>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Inventory API System</h3>
+        <p>Built using ASP.NET Core with role-based authentication and integrated SQL optimization for 10K+ entries.</p>
+      </div>
+      <div class="project-card">
+        <h3>Healthcare Data Dashboard</h3>
+        <p>Power BI dashboards for a medical provider—used real-time analytics and predictive insights.</p>
+      </div>
+      <div class="project-card">
+        <h3>Microservice Suite</h3>
+        <p>Developed 4 cloud-deployed services handling 20k+ transactions per day on Azure App Services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <h3>System Engineer Trainee — Infosys <span>(Mar 2025 – Jun 2025)</span></h3>
+      <ul>
+        <li>Integrated 6 RESTful endpoints in C#, handling ~2,000 daily API calls</li>
+        <li>Deployed microservices to Azure, improving deployment efficiency by 30%</li>
+        <li>Optimized SQL procedures, boosting data-fetch speed by ~15%</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Data Analyst — Kailash Healthcare Ltd <span>(Apr 2024 – Feb 2025)</span></h3>
+      <ul>
+        <li>Identified $1.5M in financial anomalies, reducing audit time by 20%</li>
+        <li>Delivered custom Power BI dashboards for Fortune 500 clients</li>
+        <li>Applied predictive analytics to improve patient outcome forecasting</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>.NET Developer — Trexova Wellbeing Pvt. Ltd <span>(Mar 2023 – Mar 2024)</span></h3>
+      <ul>
+        <li>Built 4 ASP.NET Core microservices managing 20k+ transactions/day</li>
+        <li>Improved API response time by 50% and reduced security risks to zero</li>
+        <li>Authored 30+ SQL queries and optimized 12 procedures (40% faster)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech (Computer Science):</strong> JIIT, Noida Sec-62 (2018–2022)</li>
+      <li><strong>Intermediate:</strong> Amity International School, Noida – 92%</li>
+      <li><strong>High School:</strong> Amity International School, Noida – CGPA: 10</li>
+    </ul>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Awards & Recognition</h2>
+    <p>🏆 Mr. Ebullience / Mr. Fresher – Jaypee Institute of Information & Technology</p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>📧 <a href="mailto:jayantd3@gmail.com">jayantd3@gmail.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const toggle = document.getElementById("darkToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

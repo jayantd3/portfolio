@@ -9,11 +9,11 @@ This site showcases my projects, work experience, technical skills, and includes
 
 ##  Features
 
-- 💻 Built from scratch with **HTML5**, **CSS3**, and responsive design
-- 📄 Downloadable resume button
-- 📬 Contact form powered by [Formspree](https://formspree.io/)
-- 🎨 Clean UI with dark mode toggle (optional)
-- ☁️ Hosted for free using **GitHub Pages**
+-  Built from scratch with **HTML5**, **CSS3**, and responsive design
+-  Downloadable resume button
+-  Contact form powered by [Formspree](https://formspree.io/)
+-  Clean UI with dark mode toggle (optional)
+-  Hosted for free using **GitHub Pages**
 
 ---
 

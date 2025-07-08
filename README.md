@@ -49,7 +49,7 @@ To deploy:
 
 Have feedback or want to connect?
 
-- Email: [yxng.dev@email.com](mailto:yxng.dev@email.com)
+- Email: [jayantd3@gmail.com](mailto:jayantd3@gmail.com)
 - Portfolio: [jayantd3.github.io/portfolio](https://jayantd3.github.io/portfolio)
 
 ---

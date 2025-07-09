@@ -1,440 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayant- Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jayant- Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        body {
-            background-color: black;
-            color: white;
-            font-family: poppins, sans-serif;
-        }
+  <style>
+    /* 1. RESET & BOX-SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: white;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1200px;
+      width: 90%;
+      margin: auto;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 30px;
-            background-color: rgb(17, 17, 69);
-            height: 80px;
-        }
+    /* 2. NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1.5rem;
+      background: rgb(17,17,69);
+      height: 80px;
+    }
+    .navbar ul {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      transition: color .3s, font-size .3s;
+    }
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: lavender;
+      font-size: 1.1rem;
+    }
+    #menu-icon {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    /* 3. HERO */
+    .firstsection {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2.5rem 0;
+    }
+    .firstsection > .leftsection,
+    .firstsection > .rightsection {
+      flex: 1 1 300px;
+    }
+    .purple { color: rgb(145,69,216); }
+    .buttons .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #f0daf0;
+      color: black;
+      border: 2px solid white;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background .3s;
+    }
+    .buttons .btn:hover { background: white; }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
+    /* ICON LINKS – no underline */
+    .links {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    .links a {
+      margin-right: 1rem;
+      color: white;
+      transition: color .3s;
+      text-decoration: none;
+    }
+    .links a:hover { color: lavender; }
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
+    .profile-pic {
+      max-width: 100%;
+      height: auto;
+      border-radius: 40%;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 4px solid #c87373;
+      background: #fff;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: lavender;
+      margin: 2rem 0;
+    }
 
-        nav ul li a:hover {
-            font-size: 1.4rem;
-            color: lavender;
-        }
+    /* 4. TIMELINE */
+    .secondsection {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .secondsection .text-gray { color: grey; }
+    .secondsection .box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 2.5rem auto;
+      border-top: 2px solid white;
+      padding-top: 0;
+    }
+    .secondsection .vertical {
+      flex: 1 1 220px;
+      position: relative;
+      padding-top: 1rem;
+      text-align: left;
+      margin-top: 0;
+    }
+    .secondsection .vertical::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 60px;
+      background: white;
+      z-index: 0;
+    }
+    .secondsection .vertical img {
+      display: block;
+      margin: -2rem auto 1rem;
+      width: auto;
+      max-width: 80px;
+      height: auto;
+      position: relative;
+      z-index: 1;
+      top: 0;
+    }
+    .secondsection .vertical-title1 { margin-top: 25px; }
+    .secondsection .vertical-title2 { margin-top: 25px; }
+    .secondsection .vertical-title3 { margin-top: 23px; }
+    .secondsection .vertical-title4 {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    .secondsection .vertical-desc {
+      font-size: 0.85rem;
+      color: grey;
+    }
 
-        .navbar a {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin-left: 3rem;
-            transition: 1s;
-        }
+    /* 5. FOOTER */
+    footer .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      background: purple;
+      padding: 2rem 1.5rem;
+    }
+    footer .footer ul {
+      list-style: none;
+    }
+    footer .footer ul a {
+      color: #bbb;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    footer .footer-right {
+      text-align: center;
+      color: grey;
+      background: purple;
+      padding: 1rem 0;
+    }
 
-        .navbar a:hover,
-        .navbar a.active {
-            color: var(--main-color);
-        }
+    /* 6. TYPOGRAPHY */
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    p, li {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
 
-        #menu-icon {
-            font-size: 3.6rem;
-            color: var(--text-color);
+    /* 7. MEDIA QUERIES */
+    @media (max-width: 768px) {
+      #menu-icon { display: block; }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 1.5rem;
+        background: rgb(17,17,69);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      .navbar ul.show { display: flex; }
+      .navbar ul li { margin: 0.5rem 0; }
+    }
+    @media (max-width: 600px) {
+      /* Hero section stacks */
+      .firstsection {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .firstsection > .leftsection,
+      .firstsection > .rightsection {
+        flex: none;
+        width: 100%;
+      }
+      .firstsection .leftsection {
+        text-align: center;
+      }
+      .firstsection .rightsection img {
+        margin: 0 auto;
+        max-width: 60%;
+      }
 
-        }
-
-        main hr {
-            border: 0;
-            background: lavender;
-            height: 1.2px;
-            margin: 40px 84px;
-        }
-
-        .left {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 40px 0;
-
-        }
-
-        .firstsection>div {
-            width: 30%;
-
-        }
-
-        /* secondsection div {
-            width:30%;
-        } */
-        .leftsection {
-            margin: 70px 0;
-            font-size: 3rem;
-        }
-
-        .leftsection buttons {
-            padding: 50px 0;
-        }
-
-        .leftsection .btn {
-            padding: 9px;
-            border-style: solid;
-            color: white;
-            /* border-block-color: white; */
-            border-color: white;
-            background-color: #f0daf0;
-            border: 2px solid white;
-            border-radius: 100px;
-            font-size: 20px;
-            cursor: pointer;
-            color: black;
-            text-decoration: none;
-        }
-
-        .rightsection {
-
-            width: 80%;
-        }
-
-        .purple {
-            color: rgb(145, 69, 216);
-        }
-
-        .text-gray {
-            color: grey;
-        }
-
-        #element {
-            color: rgb(111, 111, 193);
-
-        }
-
-        .secondsection {
-            /* width: 100%; */
-            max-width: 80vw;
-            /* margin-left: 150px;
-            margin-right: auto; */
-            margin: auto;
-            height: 80vh;
-            /* Center within left side */
-        }
-
-        .secondsection h1 {
-            font-size: 2rem;
-
-        }
-
-        .secondsection .box {
-            margin: 56px auto;
-            height: 100px;
-            width: 77vw;
-            position: relative;
-            border-top: 2px solid white;
-        }
-
-        .secondsection .vertical {
-            position: absolute;
-            top: 0;
-            width: 2px;
-            height: 80px;
-            background: white;
-        }
-
-        .image-top1 {
-            width: 130px;
-            position: relative;
-            top: -62px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .image-top2 {
-            width: 100px;
-            position: relative;
-            top: -62px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .image-top3 {
-            width: 100px;
-            position: relative;
-            top: -68px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .image-top4 {
-            width: 95px;
-            position: relative;
-            top: -68px;
-            left: 50%;
-            height: 65px;
-            transform: translateX(-50%);
-        }
-
-
-        .vertical-title1 {
-            margin-top: 20px;
-            top: 85px;
-            width: 150px;
-            font-size: 20px;
-        }
-
-        .vertical-title2 {
-            margin-top: 19px;
-            top: 85px;
-            width: 150px;
-            font-size: 20px;
-        }
-
-        .vertical-title3 {
-            margin-top: 13px;
-            top: 85px;
-            width: 150px;
-            font-size: 20px;
-        }
-
-        .vertical-title4 {
-            margin-top: 11px;
-            top: 85px;
-            width: 150px;
-            font-size: 20px;
-        }
-
-        .vertical-desc {
-
-
-            top: 140px;
-            color: grey;
-            width: 150px;
-            font-size: 9px;
-        }
-
-        .footer {
-            background-color: purple;
-            /* height: 230px; */
-            margin-top: 50px;
-        }
-
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer>div {
-            width: 223px;
-        }
-
-        .footer-second {
-            text-decoration: none;
-        }
-
-        footer .footer-right {
-            text-align: center;
-            background-color: purple;
-            padding: 12px 0;
-            color: grey;
-        }
-
-        .profile-pic {
-                width: 500px;
-    height: 600px;
-    border-radius: 40%;
-    object-fit: cover;
-    margin: 0 auto 1rem;
-    display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 4px solid #c87373;
-    background: #fff;
-        }
-    </style>
+      /* Timeline becomes vertical list */
+      .secondsection .box {
+        display: flex;
+        flex-direction: column;
+        border-top: none;
+        padding-top: 0;
+      }
+      .secondsection .vertical {
+        position: static !important;
+        flex: none;
+        width: 100%;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+      .secondsection .vertical::before { display: none; }
+      .secondsection .vertical img {
+        margin: 0 auto 1rem;
+        top: 0 !important;
+      }
+    }
+    @media (max-width: 400px) {
+      body { font-size: 16px; }
+      nav { padding: 0.5rem 1rem; }
+      .firstsection { margin: 1.5rem 0; }
+      hr { margin: 1.5rem 0; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
     <header>
-        <nav>
-            <div class="left">Jayant's Portfolio</div>
-            <div class="right">
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="about.html">Projects</a></li>
-                        <!-- <li><a href="Skills">Experience</a></li> -->
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </nav>
+      <nav>
+        <div class="left">Jayant's Portfolio</div>
+        <i id="menu-icon" class="bx bx-menu"></i>
+        <div class="right navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Hi, My name is <span class="purple">Jayant Gusain </span>
-                <div>and I am a passionate</div>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi, My name is <span class="purple">Jayant Gusain</span><br>
+          and I am a passionate<br>
+          <span id="element"></span>
 
-                <span id="element"></span>
-                <div class="buttons">
+          <div class="buttons">
+            <a href="latestCV.pdf" download class="btn">Download Resume</a>
+          </div>
 
-                    <a href="latestcv.pdf" download class="btn"> Download Resume</a>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/jayantgusain/" target="_blank">
+              <i class="bx bxl-linkedin-square bx-tada"></i>
+            </a>
+            <a href="https://www.instagram.com/jayant.gusain" target="_blank">
+              <i class="bx bxl-instagram bx-flip-horizontal bx-tada"></i>
+            </a>
+            <a href="https://github.com/jayantd3" target="_blank">
+              <i class="bx bxl-github bx-flip-horizontal bx-tada"></i>
+            </a>
+          </div>
+        </div>
 
-                    <!-- <a href="https://github.com/jayantd3" class="btn">Visit Github</a> -->
-                </div>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/jayantgusain/" target="_blank"><i class="bx bxl-linkedin-square bx-tada"></i></a>
-                    <a href="https://www.instagram.com/jayant.gusain" target="_blank"><i class="bx bxl-instagram bx-flip-horizontal bx-tada"></i></a>
-                    <a href="https://github.com/jayantd3" target="_blank"><i class="bx bxl-github bx-flip-horizontal bx-tada"></i></a>
-                </div>
+        <div class="rightsection">
+          <img src="Images/Passportpic.jpg" class="profile-pic" alt="Jayant Gusain">
+        </div>
+      </section>
+
+      <hr>
+
+      <section class="secondsection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vertical">
+            <img src="Images/ai.png" alt="" class="img1">
+            <div class="vertical-title1">
+              A.I. Intern, Smartknower by Microsoft<br>Dec 2020 – Feb 2021
             </div>
-
-
-            <div class="rightsection">
-                <img src="Images/Passportpic.jpg" class="profile-pic">
-
+            <div class="vertical-desc">
+              Trained a Deep Learning Convolutional Neural Network to detect whether a person is wearing a mask or not…
             </div>
+          </div>
 
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="text-gray">What I have done so far</span>
-            <h1>Work Experience</h1>
-
-            <div class="box">
-                <div class="vertical" style="left:20%;">
-                    <img class="image-top1" src="Images/ai.png">
-                    <div class="vertical-title1">
-                        A.I. Intern, Smartknower by Microsoft <br>
-                        Dec 2020 – Feb 2021
-                    </div>
-                    <div class="vertical-desc">
-                        Trained a Deep Learning Convolutional Neural Network to detect whether a person is wearing a
-                        mask or not in real-time. Trained a Neural Network to predict heart disease in a person using
-                        data like age, gender, cholesterol, Blood pressure, etc.
-                    </div>
-                </div>
-                <div class="vertical" style="left:40%;">
-                    <img class="image-top2" src="Images/net.png">
-                    <div class="vertical-title2">
-                        Trexova Wellbeing Pvt. Ltd. | Full Stack Developer<br> March 2022 – March 2023
-                    </div>
-                    <div class="vertical-desc">
-                        Engineered 4 ASP.NET Core microservices handling 20K+ daily healthcare transactions with 99.8%
-                        uptime. Built 5 REST APIs, optimized 30+ SQL queries and 12 procedures (40% faster
-                        data-fetching). Secured 120+ endpoints via RBAC, AES encryption, and validation. Collaborated
-                        with a 6-member hybrid team, integrating Java services with 4 legacy systems. Resolved 20+
-                        bottlenecks, improving API speed by 50% and DB throughput by 30%.
-                    </div>
-                </div>
-                <div class="vertical" style="left: 60%;">
-                    <img class="image-top3" src="Images/analyst.png">
-                    <div class="vertical-title3">
-                        Kailash Healthcare Ltd | Data Analyst<br> April 2024 – Feb 2025
-                    </div>
-                    <div class="vertical-desc">
-                        Conducted fraud analytics and risk mitigation for Fortune 500 audit clients (Banking, Insurance,
-                        FSI), boosting scope by 100% and cutting manual effort by 50% using EDA, SAS, and SQL. Detected
-                        $1.5M in discrepancies from large financial datasets, accelerating audit completion by 20%.
-                        Delivered Power BI dashboards to enhance decision-making, applied predictive analytics to
-                        patient data, and led project delivery, budgeting, and mentoring efforts for timely execution.
-
-                    </div>
-                </div>
-
-                <div class="vertical" style="left:80%;">
-                    <img class="image-top4" src="Images/dev.jpg">
-                    <div class="vertical-title4">
-                        Internship, Infosys | System Engineer Trainee <br>March 2025 - June 2025
-                    </div>
-                    <div class="vertical-desc">
-                        Contributed to full-stack development by styling UIs with HTML/CSS, integrating 6 REST APIs in
-                        C#, and creating 4 reusable Angular components. Optimized ~20 SQL queries (15% faster fetch) and
-                        deployed 2 microservices to Azure. Achieved ~60% unit test coverage across .NET/Java, reducing
-                        defects by 15%, and delivered all sprint goals on time in a 5-member Agile team.
-
-                    </div>
-                </div>
-
+          <div class="vertical">
+            <img src="Images/net.png" alt="" class="img2">
+            <div class="vertical-title2">
+              Trexova Wellbeing Pvt. Ltd. | Full Stack Developer<br>March 2022 – March 2023
             </div>
-        </section>
+            <div class="vertical-desc">
+              Engineered 4 ASP.NET Core microservices handling 20K+ daily healthcare transactions with 99.8% uptime…
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img src="Images/analyst.png" alt="" class="img3">
+            <div class="vertical-title3">
+              Kailash Healthcare Ltd | Data Analyst<br>April 2024 – Feb 2025
+            </div>
+            <div class="vertical-desc">
+              Conducted fraud analytics and risk mitigation for Fortune 500 audit clients, boosting scope by 100%…
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img src="Images/dev.jpg" alt="" class="img4">
+            <div class="vertical-title4">
+              Internship, Infosys | System Engineer Trainee<br>March 2025 – June 2025
+            </div>
+            <div class="vertical-desc">
+              Contributed to full-stack development by styling UIs with HTML/CSS, integrating 6 REST APIs in C#…
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer" style="margin-top: 100px;">
-            <div class="footer-first">
-                <h3>Jayant's Developer Portfolio</h3>
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <a href="index.html" style="text-decoration: none; color: rgb(187, 179, 179);">
-                        <li>Home</li>
-                    </a>
-                    <a href="about.html" style="text-decoration: none; color: rgb(187, 179, 179);">
-                        <li>About</li>
-                    </a>
-                    <a href="about.html" style="text-decoration: none; color: rgb(187, 179, 179);">
-                        <li>Projects</li>
-                    </a>
-                    <a href="contact.html" style="text-decoration: none; color: rgb(187, 179, 179);">
-                        <li>Contact Me</li>
-                    </a>
-
-
-                </ul>
-            </div>
-            <div class="footer-third"></div>
-            <div class="footer-fourth"></div>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Jayant's Developer Portfolio</h3>
         </div>
-        <div class="footer-right">
-            Copyright &#169; Jayantsportfolio.com | ALL RIGHTS RESERVED
+        <div class="footer-second">
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="about.html"><li>Projects</li></a>
+            <a href="contact.html"><li>Contact Me</li></a>
+          </ul>
         </div>
+        <div class="footer-third"></div>
+        <div class="footer-fourth"></div>
+      </div>
+      <div class="footer-right">
+        Copyright © Jayantsportfolio.com | ALL RIGHTS RESERVED
+      </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['<i>Full Stack Developer, .NET Developer  </i>', '&amp;<i> a Rapper</i>'],
-            typeSpeed: 50,
-        });
-    </script>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuIcon = document.getElementById('menu-icon');
+    menuIcon.addEventListener('click', () => {
+      document.querySelector('.navbar ul').classList.toggle('show');
+    });
+
+    // Typed.js
+    new Typed('#element', {
+      strings: [
+        '<i>Full Stack Developer, .NET Developer</i>',
+        '&amp;<i>a Rapper</i>'
+      ],
+      typeSpeed: 50,
+      loop: true
+    });
+  </script>
 </body>
-
-
 </html>
+```

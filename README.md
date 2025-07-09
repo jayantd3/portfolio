@@ -12,7 +12,7 @@ This site showcases my projects, work experience, technical skills, and includes
 -  Built from scratch with **HTML5**, **CSS3**, and responsive design
 -  Downloadable resume button
 -  Contact form powered by [Formspree](https://formspree.io/)
--  Clean UI with dark mode toggle (optional)
+-  Clean UI with dark mode toggle in about section 
 -  Hosted for free using **GitHub Pages**
 
 ---
@@ -36,7 +36,7 @@ To deploy:
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - HTML5
 - CSS3

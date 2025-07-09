@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Jayant Gusain</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -17,9 +18,15 @@
       align-items: center;
     }
 
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     .contact-container {
       background: #ffffff;
-      padding: 2.5rem ;
+      padding: 2.5rem;
       border-radius: 10px;
       max-width: 600px;
       width: 90%;
@@ -50,17 +57,19 @@
       color: #34495e;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 0.75rem;
-      margin:0;
+      margin: 0;
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       transition: border-color 0.3s ease;
     }
 
-    input:focus, textarea:focus {
+    input:focus,
+    textarea:focus {
       border-color: #2980b9;
       outline: none;
     }
@@ -84,10 +93,10 @@
 
     @media (max-width: 500px) {
       .contact-container {
-         margin: 2rem auto;
-  padding: 2.5rem;
-  max-width: 500px;
-  width: 100%;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        max-width: 500px;
+        width: 100%;
       }
 
       .contact-container h1 {
@@ -96,6 +105,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="contact-container">
     <h1>Contact Me</h1>
@@ -136,4 +146,5 @@
     }
   </script>
 </body>
+
 </html>
